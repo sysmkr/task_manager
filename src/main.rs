@@ -1,20 +1,6 @@
-use serde_json::{json, to_writer};
-use std::fs::File;
-use std::io::Result;
-
-fn main() -> Result<()> {
-    // Create the JSON data
-    let data = json!({
-        "message": "Hello"
-    });
-
-    // Open or create the file `data.json` for writing
-    let file = File::create("src/data.json")?;
-
-    // Write the JSON data to the file
-    to_writer(file, &data)?;
-
-    println!("Message written to data.json");
-
-    Ok(())
-}
+// Create a to do list
+//
+// Task (struct) have : title (String), completion (bool)
+// Learn how std::env works (part for argument handling in priority)
+// Learn how to manipulate JSON data using serde and other utils
+// Learn how to conceptualize flowcharts / trees
