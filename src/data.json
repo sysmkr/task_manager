@@ -1,0 +1,28 @@
+{
+  "task_list": [
+    {
+      "title": "Buy groceries",
+      "completion": false
+    },
+    {
+      "title": "Finish Rust project",
+      "completion": true
+    },
+    {
+      "title": "Read a book",
+      "completion": false
+    },
+    {
+      "title": "Code",
+      "completion": false
+    },
+    {
+      "title": "Run",
+      "completion": false
+    },
+    {
+      "title": "Sleep",
+      "completion": false
+    }
+  ]
+}

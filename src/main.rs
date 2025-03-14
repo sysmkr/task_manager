@@ -1,6 +1,16 @@
-// Create a to do list
-//
-// Task (struct) have : title (String), completion (bool)
-// Learn how std::env works (part for argument handling in priority)
-// Learn how to manipulate JSON data using serde and other utils
-// Learn how to conceptualize flowcharts / trees
+mod task;
+
+use std::env;
+
+// Tasky specific
+use task::Task;
+
+fn main() {
+    let mut arguments: Vec<String> = env::args().collect();
+    arguments.remove(0);
+
+    match arguments[0].trim() {
+        "add" => println!("add"),
+        _ => println!("Invalid query"),
+    }
+}
