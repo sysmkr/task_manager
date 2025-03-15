@@ -1,16 +1,3 @@
-mod task;
-
-use std::env;
-
-// Tasky specific
-use task::Task;
-
-fn main() {
-    let mut arguments: Vec<String> = env::args().collect();
-    arguments.remove(0);
-
-    match arguments[0].trim() {
-        "add" => println!("add"),
-        _ => println!("Invalid query"),
-    }
-}
+// 1. Map functionalities
+// 2. Build all the features in 'task.rs'
+// 3. Write 'main.rs' based on the map functionalities
