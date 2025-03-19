@@ -1,3 +1,11 @@
-// 1. Map functionalities
-// 2. Build all the features in 'task.rs'
-// 3. Write 'main.rs' based on the map functionalities
+mod utils;
+mod task;
+
+use utils::{ collect_arguments, analyse_arguments };
+use task::Task;
+
+
+fn main() {
+    let arg_list = collect_arguments();
+    analyse_arguments(&arg_list);
+}
