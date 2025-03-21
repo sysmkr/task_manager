@@ -1,4 +1,4 @@
-## TUI To-Do List
+## Task manager
 
 <br>
 
@@ -51,7 +51,7 @@ list of tasks. The to-do list is persisted in a JSON file so the data is retaine
 
 2. Go to the directory
   ```bash
-  cd tasky
+  cd task_manager
   ```
 
 3. Launch the app
@@ -74,11 +74,10 @@ After building and running the project, it is possible to interact with the appl
 #### Commands
 
 ```bash
-cargo run -- add "Write Rust tutorial"
-cargo run -- add "Read Rust book"
+cargo run -- add <task_name>
+cargo run -- remove <task_name>
+cargo run -- check <task_name>
 cargo run -- list
-cargo run -- done 1
-cargo run -- remove 2
 ```
 
 <br>
@@ -92,12 +91,13 @@ cargo run -- remove 2
 <br>
 
 ```txt
-todo-cli/
+task_manager/
 ├── src/
+│   ├── data.json          # Storage for interactions
 │   ├── main.rs            # Main application logic
+│   ├── tools.rs           # Functions used in 'main.rs'
 │   └── task.rs            # Task struct and methods
 ├── Cargo.toml             # Cargo configuration file
-└── tasks.json             # Persisted task data (JSON file)
 ```
 
 <br>
@@ -110,4 +110,3 @@ todo-cli/
 
 - **serde** : For serializing and deserializing task data into JSON format.
 - **serde_json** : For reading and writing JSON files.
-- **clap** : For parsing command-line arguments.

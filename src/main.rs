@@ -1,15 +1,14 @@
-mod utils;
+mod tools;
 mod task;
-
 use task::Task;
+use std::path::Path;
 
 fn main() {
 
-    // let data_file: &str = "data.json";
-    let mut task_list: Vec<Task> = Vec::new();
-    // utils::tansfer(&data_file);
-    let arg_list = utils::collect_arguments();
-    utils::analyse_arguments(&arg_list, &mut task_list);
-    // utils::update(&data_file, &task_list)
+    const data_file: &str = "./src/data.json";
+    let mut task_list: Vec<Task> = tools::load_from(&data_file);
+    let arg_list = tools::collect_args();
+    tools::analyse_args(&arg_list, &mut task_list);
+    tools::save_to(&data_file, &task_list);
 
 }
